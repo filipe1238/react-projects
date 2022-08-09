@@ -190,6 +190,7 @@ input {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .btn:hover {
   background: var(--clr-primary-7);
 }
@@ -236,7 +237,7 @@ input.error {
 .color-value {
   color: var(--clr-grey-1);
   margin-bottom: 0;
-  
+
 }
 
 .color-light .color-value {
@@ -251,4 +252,11 @@ input.error {
   text-transform: uppercase;
   font-size: 0.85rem;
   margin-top: 0.5rem;
+}
+
+.message {
+  position: absolute;
+  color: var(--clr-red-dark);
+  top: 0;
+
 }
