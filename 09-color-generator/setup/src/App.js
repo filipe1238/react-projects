@@ -13,7 +13,6 @@ function App() {
     let colors = ''
     let hexCode = color.match(/^#[a-f0-9]{6}/gi);
     try {
-
       setError(false);
       colors = new Values(hexCode[0]).all(20)/*return a list of rgb's*/
       if (hexCode != null) {
@@ -25,7 +24,6 @@ function App() {
         setError(false);
       }, 5000);
     }
-
   }
 
   return <>
@@ -38,7 +36,6 @@ function App() {
           placeholder='Insert Hexcode of 6 digits'
           value={color}
           onChange={(e) => setColor(e.target.value)} />
-
         <button type='submit' className={`btn`}>
           Submit
         </button>
