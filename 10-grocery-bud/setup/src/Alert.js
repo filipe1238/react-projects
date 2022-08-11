@@ -7,7 +7,7 @@ const Alert = ({ show, type, msg, disableAlert, productList }) => {
       disableAlert();
     }, 3000);
     return () => clearTimeout(timeout);
-  }, [productList, disableAlert]);
+  }, [disableAlert]);
 
   return <>
     {show && <h2 className={`alert alert-${type}`}>{msg}</h2>}

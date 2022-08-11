@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import List from './List'
 import Alert from './Alert'
 
@@ -38,9 +38,10 @@ function App() {
       setProduct('');
     }
   }
-  const disableAlert = () => {
+  const disableAlert = useCallback(() => {
     setAlert({ ...alert, show: false })
-  }
+  }, [alert])
+
   useEffect(() => {
     localStorage.setItem("productLists", JSON.stringify(productList))
   }, [productList])

@@ -23,7 +23,11 @@ const List = ({ productList, setProductList, deleteItem, edit }) => {
             </div>
           </article>
         })}
+
+
+
         <button
+         /*  disabled={productList ? true : false} */
           className='clear-btn'
           onClick={() => {
             setProductList([]);
